@@ -11,4 +11,5 @@ fun main() {
     print(intArray[2])
     print("\n")
     print(Arrays.toString(mixArray))
+    println()
 }
