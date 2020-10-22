@@ -10,5 +10,5 @@ fun main() {
     print("\n")
     print(intArray[2])
     print("\n")
-    print(Arrays.toString(mixArray))
+    print(Arrays.toString(mixArray)) //test
 }

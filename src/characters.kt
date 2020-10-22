@@ -7,5 +7,5 @@ fun main() {
     println("Vocal " + vocal--)
     println("Vocal " + vocal--)
     println("Vocal " + vocal--)
-    println("Vocal " + vocal--)
+    println("Vocal " + vocal--) // test
 }

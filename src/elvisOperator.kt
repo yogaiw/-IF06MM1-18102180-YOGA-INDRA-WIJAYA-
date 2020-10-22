@@ -3,5 +3,5 @@ fun main() {
     val textLength = text?.length ?: 7
     val score:Int? = null
     println(textLength)
-    print(score?:89)
+    print(score?:89) // test
 }

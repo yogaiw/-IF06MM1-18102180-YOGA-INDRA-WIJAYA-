@@ -9,5 +9,5 @@ fun main(){
     } else {
         " Kantin sedang tutup"
     }
-    print(office)
+    print(office) // test
 }

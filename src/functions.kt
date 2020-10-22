@@ -6,5 +6,5 @@ fun main() {
 fun setUser(name: String, age: Int) = "Your name is $name, and you $age years old"
 
 fun printUser(name: String) {
-    println("Your name is $name")
+    println("Your name is $name") // test
 }
