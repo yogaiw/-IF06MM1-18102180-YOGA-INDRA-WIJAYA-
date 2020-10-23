@@ -10,5 +10,5 @@ fun main() {
     val rangesb = 1.rangeTo(10) step 3
     for ((index, value) in rangesb.withIndex()) {
         println("value $value with index $index")
-    }
+    } // test
 }

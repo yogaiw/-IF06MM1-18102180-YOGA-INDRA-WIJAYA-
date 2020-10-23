@@ -17,5 +17,5 @@ fun main() {
     print(nilaiA + nilaiB)
 
     print("\n")
-    print(kataAwal + kataAkhir)
+    print(kataAwal + kataAkhir) // test
 }
