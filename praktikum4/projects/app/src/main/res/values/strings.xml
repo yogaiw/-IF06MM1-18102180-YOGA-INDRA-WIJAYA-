@@ -1,5 +1,9 @@
 <resources>
-    <string name="app_name">Practice5Activity</string>
+    <string name="app_name">Praktikum 4</string>
     <string name="hint_input_prodi">Isi Prodi</string>
     <string name="btn_prodi">Bawa Data Prodi ke Activity Lain</string>
+    <string name="btn_call_browser">Panggil ittelkom-pwt.ac.id</string>
+    <string name="btn_call_camera">Panggil Kamera</string>
+    <string name="input_phone_number">Input Nomor Telepon</string>
+    <string name="btn_call_phone">Telepon</string>
 </resources>
