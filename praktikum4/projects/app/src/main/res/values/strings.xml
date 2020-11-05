@@ -13,4 +13,6 @@
     <string name="input_nim">Masukkan NIM</string>
     <string name="btn_to_second_fragment">Buka Fragment Kedua</string>
     <string name="btn_fragment">Buka Fragment</string>
+    <string name="fragment_second">ini Halaman Fragment Kedua</string>
+    <string name="btn_kembali_beranda">Kembali</string>
 </resources>
