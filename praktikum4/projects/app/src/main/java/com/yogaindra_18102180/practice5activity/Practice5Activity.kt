@@ -27,6 +27,7 @@ class Practice5Activity : AppCompatActivity() {
         val btnCallCamera: Button = findViewById(R.id.btnCallCamera)
         val btnCallPhone: Button = findViewById(R.id.btnCallPhone)
         val inputPhoneNumber: EditText = findViewById(R.id.inputPhoneNumber)
+        val btnFragment: Button = findViewById(R.id.btnFragment)
 
         btnProdi.setOnClickListener {
             val namaProdi = inputProdi.text.toString()
@@ -60,6 +61,11 @@ class Practice5Activity : AppCompatActivity() {
             }
             val intent = Intent(Intent.ACTION_CALL)
             intent.data = Uri.parse("tel:" + phoneNumber)
+            startActivity(intent)
+        }
+
+        btnFragment.setOnClickListener {
+            val intent = Intent(this, Practice5ForFragmentActivity::class.java)
             startActivity(intent)
         }
     }
