@@ -17,10 +17,7 @@ class GridMyDataAdapter(val listMyDatas: ArrayList<MyData>) : RecyclerView.Adapt
     }
 
     override fun onBindViewHolder(holder: GridViewHolder, position: Int) {
-        Glide.with(holder.itemView.context)
-                .load(listMyDatas[position].photo)
-                .apply(RequestOptions().override(350, 550))
-                .into(holder.imgPhoto)
+        Glide.with(holder.itemView.context).load(listMyDatas[position].photo).apply(RequestOptions().override(350, 550)).into(holder.imgPhoto)
     }
 
     override fun getItemCount(): Int {

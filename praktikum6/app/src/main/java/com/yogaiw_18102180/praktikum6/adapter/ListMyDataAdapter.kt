@@ -25,10 +25,7 @@ class ListMyDataAdapter(private val listMyData: ArrayList<MyData>) : RecyclerVie
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(myData: MyData) {
             with(itemView){
-                Glide.with(itemView.context)
-                    .load(myData.photo)
-                    .apply(RequestOptions().override(55, 55))
-                    .into(img_item_photo)
+                Glide.with(itemView.context).load(myData.photo).apply(RequestOptions().override(55, 55)).into(img_item_photo)
                 tv_item_name.text = myData.name
                 tv_item_description.text = myData.description
             }
