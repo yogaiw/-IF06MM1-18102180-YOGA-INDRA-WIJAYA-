@@ -22,6 +22,7 @@ class ListMyDataAdapter(private val listMyData: ArrayList<MyData>) : RecyclerVie
     }
 
     override fun getItemCount(): Int = listMyData.size
+
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(myData: MyData) {
             with(itemView){
