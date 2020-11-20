@@ -21,6 +21,35 @@
         <item>Bumi Perkemahan Baturraden</item>
     </string-array>
 
+    <string-array name="data_lat">
+        <item>-7.333797</item>
+        <item>-7.374473</item>
+        <item>-7.3048962</item>
+        <item>-7.3060275</item>
+        <item>-7.311052</item>
+        <item>-7.4165802</item>
+        <item>-7.4201675</item>
+        <item>-7.4238144</item>
+        <item>-7.355515</item>
+        <item>-7.3353517</item>
+        <item>-7.5190073</item>
+        <item>-7.312009</item>
+    </string-array>
+    <string-array name="data_lang">
+        <item>109.206959</item>
+        <item>109.240532</item>
+        <item>109.2420843</item>
+        <item>109.2401843</item>
+        <item>109.217618</item>
+        <item>109.2554191</item>
+        <item>109.1916471</item>
+        <item>109.2233289</item>
+        <item>109.2247193</item>
+        <item>109.1983539</item>
+        <item>109.2123145</item>
+        <item>109.2299624</item>
+    </string-array>
+
     <string-array name="data_description">
         <item>
             Berada di lereng Gunung Slamet, wisata Pagubugan akan membawa Anda merasakan betapa
@@ -204,4 +233,5 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

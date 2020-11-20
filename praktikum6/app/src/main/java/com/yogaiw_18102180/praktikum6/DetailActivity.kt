@@ -1,6 +1,7 @@
 package com.yogaiw_18102180.praktikum6
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.os.Parcelable
 import com.google.android.material.appbar.CollapsingToolbarLayout
@@ -29,9 +30,10 @@ class DetailActivity : AppCompatActivity() {
         val myData by getParcelableExtra<MyData>(DetailActivity.EXTRA_MYDATA)
 
         setSupportActionBar(findViewById(R.id.toolbar))
-        findViewById<FloatingActionButton>(R.id.fab).setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+        findViewById<FloatingActionButton>(R.id.fab).setOnClickListener {
+            val moveWithObjectIntent = Intent(this, MapsActivity::class.java)
+            moveWithObjectIntent.putExtra(MapsActivity.EXTRA_MYDATA, myData)
+            startActivity(moveWithObjectIntent)
         }
 
         supportActionBar?.title = myData?.name.toString()
