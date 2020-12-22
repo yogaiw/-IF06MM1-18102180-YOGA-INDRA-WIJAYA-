@@ -19,6 +19,13 @@
         android:text="@string/this_play"
         android:textSize="18sp"
         android:layout_marginBottom="16dp"/>
+    <TextView
+        android:id="@+id/tv_cek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Cek Penipuan"
+        android:gravity="center_horizontal" />
     <Button
         android:id="@+id/btn_close"
         android:layout_width="wrap_content"

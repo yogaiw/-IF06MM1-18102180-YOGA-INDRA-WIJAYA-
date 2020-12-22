@@ -2,6 +2,7 @@ package com.yogaiw_18102180.praktikum8
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import kotlinx.android.synthetic.main.activity_sms_receiver.*
 
 class SmsReceiverActivity : AppCompatActivity() {
@@ -14,6 +15,8 @@ class SmsReceiverActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sms_receiver)
 
+        val penipuan = arrayOf("hadiah", "blogspot", "wordpress", "pulsa", "selamat", "transfer", "mobil", "polisi", "rumah")
+
         title = getString(R.string.incoming_message)
         val senderNo = intent.getStringExtra(EXTRA_SMS_NO)
         val senderMessage = intent.getStringExtra(EXTRA_SMS_MESSAGE)
@@ -21,6 +24,21 @@ class SmsReceiverActivity : AppCompatActivity() {
         tv_message.text = senderMessage
         btn_close.setOnClickListener {
             finish()
+        }
+
+        val splittedMsg = senderMessage.toString().toLowerCase().split(" ").toTypedArray()
+        for(i in splittedMsg) {
+            Log.d("TAG", i)
+            for(j in penipuan) {
+                if (i==j) {
+                    Log.d("TAG", "indikasi")
+                    tv_cek.text = getString(R.string.penipuan_true)
+                    break
+                } else {
+                    tv_cek.text = getString(R.string.penipuan_false)
+                }
+            }
+            break
         }
     }
 }
