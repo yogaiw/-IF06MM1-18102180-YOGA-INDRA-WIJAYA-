@@ -3,6 +3,8 @@ package com.yogaindra_18102180.sharedpreference
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatDelegate
 import com.yogaindra_18102180.sharedpreference.databinding.ActivityMainBinding
 
@@ -20,6 +22,21 @@ class MainActivity : AppCompatActivity() {
         mSettingPreference = SettingPreference(this)
         showExistingPreference()
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val id = item.itemId
+
+        if(id == R.id.menu_setting) {
+            openSetting()
+        }
+
+        return super.onOptionsItemSelected(item)
     }
 
     private fun showExistingPreference() {
