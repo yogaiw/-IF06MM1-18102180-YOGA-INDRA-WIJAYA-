@@ -106,15 +106,57 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_phone" />
 
         <TextView
+            android:id="@+id/textView6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/golongan"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/textView4"
+            app:layout_constraintStart_toStartOf="@id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"/>
+
+        <TextView
+            android:id="@+id/tv_golongan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{settingModel.golonganDarah}"
+            app:layout_constraintEnd_toEndOf="@+id/tv_age"
+            app:layout_constraintStart_toStartOf="@+id/tv_age"
+            app:layout_constraintTop_toBottomOf="@+id/tv_age" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/prodi"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/textView6"
+            app:layout_constraintStart_toStartOf="@id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/textView6"/>
+
+        <TextView
+            android:id="@+id/tv_prodi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{settingModel.prodi}"
+            app:layout_constraintEnd_toEndOf="@+id/tv_golongan"
+            app:layout_constraintStart_toStartOf="@+id/tv_golongan"
+            app:layout_constraintTop_toBottomOf="@+id/tv_golongan"/>
+
+        <TextView
             android:id="@+id/textView5"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/tv_theme"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/textView4"
-            app:layout_constraintStart_toStartOf="@+id/textView4"
-            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+            app:layout_constraintEnd_toEndOf="@+id/textView7"
+            app:layout_constraintStart_toStartOf="@+id/textView7"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
         <TextView
             android:id="@+id/tv_theme"
@@ -122,9 +164,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@{settingModel.isDarkTheme == true ? @string/dark_theme : @string/light_theme}"
-            app:layout_constraintEnd_toEndOf="@+id/tv_age"
-            app:layout_constraintStart_toStartOf="@+id/tv_age"
-            app:layout_constraintTop_toBottomOf="@+id/tv_age" />
+            app:layout_constraintEnd_toEndOf="@+id/tv_prodi"
+            app:layout_constraintStart_toStartOf="@+id/tv_prodi"
+            app:layout_constraintTop_toBottomOf="@+id/tv_prodi" />
 
         <Button
             android:id="@+id/btn_save"

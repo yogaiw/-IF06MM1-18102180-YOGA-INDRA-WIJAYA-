@@ -9,6 +9,8 @@ internal class SettingPreference(context: Context) {
         private const val EMAIL = "email"
         private const val AGE = "age"
         private const val PHONE_NUMBER = "phone"
+        private const val GOLONGAN_DARAH = "golongan"
+        private const val PRODI = "prodi"
         private const val THEME = "theme"
     }
 
@@ -20,6 +22,8 @@ internal class SettingPreference(context: Context) {
         editor.putString(EMAIL, value.email)
         editor.putInt(AGE, value.age)
         editor.putString(PHONE_NUMBER, value.phoneNumber)
+        editor.putString(GOLONGAN_DARAH, value.golonganDarah)
+        editor.putString(PRODI, value.prodi)
         editor.putBoolean(THEME, value.isDarkTheme)
         editor.apply()
     }
@@ -30,6 +34,8 @@ internal class SettingPreference(context: Context) {
         model.email = preferences.getString(EMAIL, "")
         model.age = preferences.getInt(AGE, 0)
         model.phoneNumber = preferences.getString(PHONE_NUMBER, "")
+        model.golonganDarah = preferences.getString(GOLONGAN_DARAH, "")
+        model.prodi = preferences.getString(PRODI, "")
         model.isDarkTheme = preferences.getBoolean(THEME, false)
         return model
     }

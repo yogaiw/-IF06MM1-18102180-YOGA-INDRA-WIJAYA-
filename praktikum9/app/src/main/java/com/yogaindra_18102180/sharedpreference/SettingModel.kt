@@ -9,5 +9,7 @@ data class SettingModel(
     var email: String? = null,
     var age: Int = 0,
     var phoneNumber: String? = null,
+    var golonganDarah: String? = null,
+    var prodi: String? = null,
     var isDarkTheme: Boolean = false
 ):Parcelable
