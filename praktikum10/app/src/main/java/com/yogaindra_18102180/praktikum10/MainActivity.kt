@@ -1,5 +1,6 @@
 package com.yogaindra_18102180.praktikum10
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -9,6 +10,7 @@ import com.yogaindra_18102180.praktikum10.adapter.QuoteAdapter
 import com.yogaindra_18102180.praktikum10.data.Quote
 import com.yogaindra_18102180.praktikum10.databinding.ActivityMainBinding
 import com.yogaindra_18102180.praktikum10.db.QuoteHelper
+import com.yogaindra_18102180.praktikum10.helper.REQUEST_ADD
 import com.yogaindra_18102180.praktikum10.helper.mapCursorToArrayList
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.Dispatchers
@@ -31,6 +33,12 @@ class MainActivity : AppCompatActivity() {
         binding.rvQuotes.setHasFixedSize(true)
         adapter = QuoteAdapter(this)
         binding.rvQuotes.adapter = adapter
+
+        binding.fabAdd.setOnClickListener {
+            val intent = Intent(this@MainActivity, QuoteAddUpdateActivity::class.java)
+            startActivityForResult(intent, REQUEST_ADD)
+        }
+
         quoteHelper = QuoteHelper.getInstance(applicationContext)
         quoteHelper.open()
         if (savedInstanceState == null) {
