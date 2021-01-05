@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Praktikum 10</string>
-    <string name="title">No Title</string>
-    <string name="category">Category</string>
-    <string name="description">No Description</string>
+    <string name="title">Judul</string>
+    <string name="category">Kategori</string>
+    <string name="description">Deskripsi</string>
     <string name="date">Date</string>
     <string name="submit">Tambah</string>
     <string name="delete">Hapus</string>
