@@ -3,9 +3,12 @@ package com.yogaindra_18102180.praktikum11
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
 import android.view.View
 import android.widget.Toast
+import androidx.core.view.isVisible
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.yogaindra_18102180.praktikum11.databinding.ActivityMainBinding
@@ -50,6 +53,34 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             val intent = Intent(this, SignInActivity::class.java)
             startActivity(intent)
             finish()
+        } else {
+            updateUI(currentUser)
+        }
+    }
+
+    private fun updateUI(currentUser: FirebaseUser) {
+        currentUser?.let {
+            val name = currentUser.displayName
+            val phoneNumber = currentUser.phoneNumber
+            val email = currentUser.email
+            val photoUrl = currentUser.photoUrl
+            val emailVerified = currentUser.isEmailVerified
+            val uid = currentUser.uid
+            binding.tvName.text = name
+            if(TextUtils.isEmpty(name)){
+                binding.tvName.text = "No Name"
+            }
+            binding.tvUserId.text = email
+            for (profile in it.providerData) {
+                val providerId = profile.providerId
+                if(providerId=="password" && emailVerified==true){
+                    binding.btnEmailVerify.isVisible = false
+                }
+                if(providerId=="phone"){
+                    binding.tvName.text = phoneNumber
+                    binding.tvUserId.text = providerId
+                }
+            }
         }
     }
 
@@ -65,6 +96,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 }
             }
     }
+
     private fun signOut() {
         auth.signOut()
         val currentUser = auth.currentUser
