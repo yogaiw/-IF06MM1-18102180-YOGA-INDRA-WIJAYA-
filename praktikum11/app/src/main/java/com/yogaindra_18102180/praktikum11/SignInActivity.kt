@@ -3,6 +3,7 @@ package com.yogaindra_18102180.praktikum11
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
 import android.view.View
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
@@ -41,10 +42,9 @@ class SignInActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun signIn(email: String, password: String) {
-        /**if (!validateForm()) {
+        if (!validateForm()) {
             return
         }
-        **/
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
@@ -55,5 +55,24 @@ class SignInActivity : AppCompatActivity(), View.OnClickListener {
                     Toast.makeText(baseContext, "Authentication failed.", Toast.LENGTH_SHORT).show()
                 }
             }
+    }
+
+    private fun validateForm(): Boolean {
+        var valid = true
+        val email = binding.inputEmail.text.toString()
+        if (TextUtils.isEmpty(email)) {
+            binding.inputEmail.error = "Required."
+            valid = false
+        } else {
+            binding.inputEmail.error = null
+        }
+        val password = binding.inputPassword.text.toString()
+        if (TextUtils.isEmpty(password)) {
+            binding.inputPassword.error = "Required."
+            valid = false
+        } else {
+            binding.inputPassword.error = null
+        }
+        return valid
     }
 }
