@@ -1,12 +1,14 @@
 package com.yogaindra_18102180.praktikum11
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -15,6 +17,7 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.yogaindra_18102180.praktikum11.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -76,6 +79,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             val photoUrl = currentUser.photoUrl
             val emailVerified = currentUser.isEmailVerified
             val uid = currentUser.uid
+            Glide.with(this).load(photoUrl).apply(RequestOptions().override(600, 200)).circleCrop().into(binding.ivImage)
             binding.tvName.text = name
             if(TextUtils.isEmpty(name)){
                 binding.tvName.text = "No Name"
