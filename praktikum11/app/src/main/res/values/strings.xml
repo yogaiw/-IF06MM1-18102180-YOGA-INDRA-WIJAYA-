@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Praktikum 11</string>
+    <string name="title">Masukkan Judul</string>
+    <string name="description">Masukkan Kalimat</string>
+    <string name="submit">Tambah</string>
+    <string name="category">Kategori</string>
+    <string name="date">Tanggal</string>
+    <string name="delete">Hapus</string>
 </resources>
