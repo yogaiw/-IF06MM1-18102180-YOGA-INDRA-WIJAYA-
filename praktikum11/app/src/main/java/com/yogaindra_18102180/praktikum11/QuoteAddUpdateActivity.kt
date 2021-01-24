@@ -1,6 +1,8 @@
 package com.yogaindra_18102180.praktikum11
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -22,6 +24,7 @@ import com.yogaindra_18102180.praktikum11.helper.ALERT_DIALOG_DELETE
 import com.yogaindra_18102180.praktikum11.helper.EXTRA_POSITION
 import com.yogaindra_18102180.praktikum11.helper.EXTRA_QUOTE
 import com.yogaindra_18102180.praktikum11.helper.RESULT_ADD
+import com.yogaindra_18102180.praktikum11.helper.RESULT_DELETE
 import com.yogaindra_18102180.praktikum11.helper.RESULT_UPDATE
 import kotlinx.android.synthetic.main.activity_dashboard_quote.*
 
@@ -195,7 +198,19 @@ class QuoteAddUpdateActivity : AppCompatActivity(), View.OnClickListener {
                 if (isDialogClose) {
                     finish()
                 } else {
-
+                    firestore.collection("quotes").document(quote?.id.toString())
+                            .delete()
+                            .addOnSuccessListener {
+                                Log.d("delete", "DocumentSnapshot successfully deleted!"+quote?.id.toString())
+                                val intent = Intent()
+                                intent.putExtra(EXTRA_POSITION, position)
+                                setResult(RESULT_DELETE, intent)
+                                finish()
+                            }
+                            .addOnFailureListener { e ->
+                                Log.w("a", "Error deleting document", e)
+                                Toast.makeText(this@QuoteAddUpdateActivity, "Gagal menghapus data", Toast.LENGTH_SHORT).show()
+                            }
                 }
             }
             .setNegativeButton("Tidak") { dialog, _ -> dialog.cancel() }
