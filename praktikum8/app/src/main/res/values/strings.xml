@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Praktikum 8</string>
+    <string name="check_sms_permission">Check SMS Permission</string>
+    <string name="coming_from">Dari</string>
+    <string name="this_play">Message</string>
+    <string name="close">tutup</string>
+    <string name="incoming_message">Incoming Message</string>
+    <string name="penipuan_true">Hati-Hati, Pesan ini terindikasi penipuan !</string>
+    <string name="penipuan_false">Pesan ini terpantau aman</string>
+</resources>
