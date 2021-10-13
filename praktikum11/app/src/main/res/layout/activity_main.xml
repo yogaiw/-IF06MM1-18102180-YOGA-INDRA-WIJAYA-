@@ -36,12 +36,26 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="UID"
-        app:layout_constraintBottom_toTopOf="@+id/btnEmailVerify"
+        app:layout_constraintBottom_toTopOf="@+id/btnMulaiQuotes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvName"
         app:layout_constraintVertical_bias="0.21" />
+
+    <Button
+        android:id="@+id/btnMulaiQuotes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Mulai Membuat Quotes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserId"
+        />
 
     <Button
         android:id="@+id/btnEmailVerify"
@@ -54,7 +68,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvUserId" />
+        app:layout_constraintTop_toBottomOf="@+id/btnMulaiQuotes" />
 
     <Button
         android:id="@+id/btnSignOut"

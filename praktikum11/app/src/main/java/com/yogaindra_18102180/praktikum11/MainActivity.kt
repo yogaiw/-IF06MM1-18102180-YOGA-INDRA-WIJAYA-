@@ -18,7 +18,6 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.yogaindra_18102180.praktikum11.databinding.ActivityMainBinding
 
-
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var auth: FirebaseAuth
@@ -40,6 +39,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         binding.btnSignOut.setOnClickListener(this)
         binding.btnEmailVerify.setOnClickListener(this)
+        binding.btnMulaiQuotes.setOnClickListener(this)
 
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
@@ -55,6 +55,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.btnEmailVerify -> {
                 sendEmailVerification()
+            }
+            R.id.btnMulaiQuotes -> {
+                val intent = Intent(this, DashboardQuoteActivity::class.java)
+                startActivity(intent)
             }
         }
     }
