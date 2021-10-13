@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "172335235879",
+    "project_id": "fir-ppb2021-bd9c3",
+    "storage_bucket": "fir-ppb2021-bd9c3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:172335235879:android:e5793bf1a9163313af1f02",
+        "android_client_info": {
+          "package_name": "com.yogaindra_18102180.praktikum11"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "172335235879-2mijfav8nk5ojd7ac5mpm494goatamqe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBs1uKZLpbwwYFhffO8rFHoBemZ5Amoil8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "172335235879-2mijfav8nk5ojd7ac5mpm494goatamqe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
